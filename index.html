@@ -127,16 +127,45 @@
     </button>
   </button>
   <script>
+    function showConfetti() {
+      const count = 40;
+      for (let i = 0; i < count; i++) {
+        const flower = document.createElement("div");
+        flower.textContent = "🌸";
+        flower.style.position = "fixed";
+        flower.style.zIndex = "9999";
+        flower.style.fontSize = "24px";
+        flower.style.pointerEvents = "none";
+        flower.style.top = Math.random() * 100 + "%";
+        flower.style.left = Math.random() * 100 + "%";
+        flower.style.transform = `translateY(-100vh) rotate(${Math.random() * 360}deg)`;
+        flower.style.animation = "fall 2s ease-out forwards";
+        document.body.appendChild(flower);
+        setTimeout(() => flower.remove(), 2000);
+      }
+    }
+
+    const style = document.createElement("style");
+    style.textContent = `
+      @keyframes fall {
+        to {
+          transform: translateY(100vh) rotate(720deg);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
     async function send() {
+      showConfetti();
       const response = await fetch("/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          number: "77070408201", // замените на нужный номер
+          number: "77070408201",
           message: "Привет! Это автоматическое сообщение 🌸"
         }),
       });
-
       const text = await response.text();
       console.log(text);
     }
