@@ -12,7 +12,7 @@
     html, body {
       margin: 0;
       padding: 0;
-      background: rgb(251, 255, 175);
+      background: var(--dark-color);
       font-family: 'Montserrat', sans-serif;
       height: 100%;
       width: 100%;
@@ -60,21 +60,6 @@
       perspective: 1000px;
     }
 
-    #flower-container .night {
-      position: absolute;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 100%;
-      filter: blur(0.1vmin);
-
-        linear-gradient(90deg, rgb(0, 255, 250), rgb(240, 240, 240));
-    }
-
-    #flower-container .flowers {
-      position: relative;
-      transform: scale(0.9);
     }
 
     #flower-container .flower {
@@ -90,6 +75,7 @@
   </style>
 </head>
 <body>
+  <div class="night"></div>
   <div class="text">
     <p>С днём рождения, мама! Этот цветок — вам.</p>
     <p>Нажимайте, когда захотите цветок.</p>
@@ -98,7 +84,6 @@
 
   <button id="svg-button" onclick="send()">
     <div id="flower-container" class="not-loaded">
-      <div class="night"></div>
       <div class="flowers">
         <div class="flower flower--1">
           <div class="flower__leafs flower__leafs--1">
