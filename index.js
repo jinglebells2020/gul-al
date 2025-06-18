@@ -6,6 +6,8 @@ const { Client, LocalAuth } = require('whatsapp-web.js');
 
 const app = express();
 app.use(express.json());
+// Serve static files like style.css and favicon.ico
+app.use(express.static(__dirname));
 
 const client = new Client({
     authStrategy: new LocalAuth(),
