@@ -40,6 +40,12 @@
       font-size: 1.2em;
       margin-bottom: 20px;
     }
+
+    #timer {
+      font-size: 1.5em;
+      color: black;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -50,176 +56,149 @@
   </div>
 
   <button id="svg-button" onclick="send()">
-    <!-- SVG remains unchanged -->
-    <svg viewBox="13 -4 461 455" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://www.boxy-svg.com/bx">
-  <g>
-    <g transform="matrix(1.013029, -2.172449, 0.805123, 0.375435, -239.771591, 474.13916)">
-      <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgba(222, 45, 94, 0.74902);" bx:origin="0.265 0.5"/>
-      <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgba(222, 45, 94, 0.74902);" bx:origin="0.729 0.5"/>
-    </g>
-    <g transform="matrix(-1.013029, 2.172449, -0.805123, -0.375435, 723.009949, -31.281298)">
-      <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgba(222, 44, 94, 0.74902);" bx:origin="0.265 0.5"/>
-      <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgba(222, 44, 94, 0.74902);" bx:origin="0.729 0.5"/>
-    </g>
-    <g transform="matrix(-2.172449, 1.01303, -0.375434, -0.805124, 764.117188, 339.656342)">
-      <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgba(105, 191, 237, 0.74902);" bx:origin="0.265 0.5"/>
-      <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgba(105, 191, 237, 0.74902);" bx:origin="0.729 0.5"/>
-    </g>
-    <g transform="matrix(2.252473, -0.819834, 0.303835, 0.834781, -276.796417, 66.121117)">
-      <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgba(105, 191, 237, 0.74902);" bx:origin="0.265 0.5"/>
-      <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgba(105, 191, 237, 0.74902);" bx:origin="0.729 0.5"/>
-    </g>
-    <g transform="matrix(-0.819834, -2.252474, 0.834782, -0.303835, 84.025528, 743.653931)">
-      <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgba(105, 191, 237, 0.74902);" bx:origin="0.265 0.5"/>
-      <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgba(105, 191, 237, 0.74902);" bx:origin="0.729 0.5"/>
-    </g>
-    <g transform="matrix(0.819834, 2.252473, -0.834781, 0.303835, 405.30777, -296.224701)">
-      <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgba(105, 191, 237, 0.74902);" bx:origin="0.265 0.5"/>
-      <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgba(105, 191, 237, 0.74902);" bx:origin="0.729 0.5"/>
-    </g>
-    <g transform="matrix(-2.172449, -1.013029, 0.375435, -0.805123, 494.329376, 705.10553)">
-      <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgba(168, 66, 171, 0.74902);" bx:origin="0.265 0.5"/>
-      <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgba(168, 66, 171, 0.74902);" bx:origin="0.729 0.5"/>
-    </g>
-    <g transform="matrix(2.172449, 1.013029, -0.375435, 0.805123, -10.540039, -257.099365)">
-      <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgba(168, 66, 171, 0.74902);" bx:origin="0.265 0.5"/>
-      <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgba(168, 66, 171, 0.74902);" bx:origin="0.729 0.5"/>
-    </g>
-    <g>
-      <g transform="matrix(0.678571, 0, 0, 0.717326, 121.009552, -24.106068)">
-        <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.265 0.5"/>
-        <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.729 0.5"/>
-      </g>
-      <g transform="matrix(0, 0.678571, -0.717326, 0, 492.233185, 101.835365)">
-        <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.265 0.5"/>
-        <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.729 0.5"/>
-      </g>
-      <g transform="matrix(0, 0.678571, -0.717326, 0, 314.712097, 103.359146)">
-        <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.265 0.5"/>
-        <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.729 0.5"/>
-      </g>
-      <g transform="matrix(0.678571, 0, 0, 0.717326, 122.53334, 153.415024)">
-        <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.265 0.5"/>
-        <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.729 0.5"/>
-      </g>
-      <g transform="matrix(0.479822, 0.479822, -0.507226, 0.507226, 338.366028, -43.240444)">
-        <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.265 0.5"/>
-        <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.729 0.5"/>
-      </g>
-      <g transform="matrix(-0.479822, -0.479822, 0.507226, -0.507226, 148.681854, 489.907806)">
-        <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.265 0.5"/>
-        <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.729 0.5"/>
-      </g>
-      <g transform="matrix(0.479822, -0.479822, 0.507226, 0.507226, -23.812111, 129.253433)">
-        <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.265 0.5"/>
-        <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.729 0.5"/>
-      </g>
-      <g transform="matrix(-0.479822, 0.479822, -0.507226, -0.507226, 509.336121, 317.41394)">
-        <path d="M 177.62 98.002 C 141.811 170.89 142.573 254.444 179.906 348.665" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.265 0.5"/>
-        <path d="M 176.858 98.002 C 211.905 173.175 212.921 256.476 179.906 347.903" style="stroke: none; fill: rgb(229, 241, 50);" bx:origin="0.729 0.5"/>
-      </g>
-      <ellipse style="fill: rgb(222, 141, 20);" cx="242.767" cy="223.713" rx="26.285" ry="25.904"/>
-    </g>
-  </g>
-</svg>
-    </button>
+    <svg viewBox="13 -4 461 455" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="240" cy="220" r="50" fill="pink" />
+    </svg>
+  </button>
+
+  <div id="timer"></div>
 
   <script>
-  let closestNumber = null;
-
-  navigator.geolocation.getCurrentPosition(
-    async function (position) {
-      const { latitude, longitude } = position.coords;
-      closestNumber = getClosestContact(latitude, longitude);
-      console.log("📍 Ближайший контакт:", closestNumber);
-    },
-    function (error) {
-      console.error("❌ Не удалось получить геолокацию:", error);
-    }
-  );
-
-  function getClosestContact(lat, lon) {
     const contacts = [
-      { lat: 51.117250, lon: 71.423751, number: "77070408201" }, // Работа
-      { lat: 51.093363, lon: 71.439482, number: "77770111011" }, // Дом 1 
-      { lat: 51.122125, lon: 71.430725, number: "77716100281" }  // Дом 2
+      {
+        lat: 51.117250,
+        lon: 71.423751,
+        number: "77070408201",
+        message: "Сообщение для работы 🌸"
+      },
+      {
+        lat: 51.093363,
+        lon: 71.439482,
+        number: "77770111011",
+        message: "Сообщение для дома 1 🌷"
+      },
+      {
+        lat: 51.122125,
+        lon: 71.430725,
+        number: "77716100281",
+        message: "Сообщение для дома 2 🌹"
+      }
     ];
 
-    let minDistance = Infinity;
-    let closest = contacts[0].number;
+    let closestContact = null;
+    let countdownInterval;
 
-    for (const contact of contacts) {
-      const distance = getDistance(lat, lon, contact.lat, contact.lon);
-      if (distance < minDistance) {
-        minDistance = distance;
-        closest = contact.number;
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        const { latitude, longitude } = position.coords;
+        closestContact = getClosestContact(latitude, longitude);
+        console.log("📍 Ближайший контакт:", closestContact.number);
+      },
+      function (error) {
+        console.error("❌ Не удалось получить геолокацию:", error);
+      }
+    );
+
+    function getClosestContact(lat, lon) {
+      let minDistance = Infinity;
+      let closest = contacts[0];
+
+      for (const contact of contacts) {
+        const distance = getDistance(lat, lon, contact.lat, contact.lon);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closest = contact;
+        }
+      }
+
+      return closest;
+    }
+
+    function getDistance(lat1, lon1, lat2, lon2) {
+      const R = 6371;
+      const dLat = (lat2 - lat1) * Math.PI / 180;
+      const dLon = (lon2 - lon1) * Math.PI / 180;
+      const a =
+        Math.sin(dLat / 2) ** 2 +
+        Math.cos(lat1 * Math.PI / 180) *
+        Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLon / 2) ** 2;
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      return R * c;
+    }
+
+    async function send() {
+      try {
+        if (!closestContact) {
+          alert("Не удалось определить ваше местоположение.");
+          return;
+        }
+
+        const response = await fetch("/send", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            number: closestContact.number,
+            message: closestContact.message
+          }),
+        });
+
+        const text = await response.text();
+        console.log("✅ Ответ от сервера:", text);
+        launchConfetti();
+        startTimer(60 * 60); // 60 минут
+      } catch (error) {
+        console.error("❌ Ошибка при отправке:", error);
       }
     }
 
-    return closest;
-  }
+    function launchConfetti() {
+      const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0.6,
+        decay: 0.94,
+        startVelocity: 25,
+        shapes: ['circle'],
+        scalar: 1.2,
+        colors: ['#E12D5E', '#69BFED', '#E5F132', '#DE8D14', '#A842AB'],
+      };
 
-  function getDistance(lat1, lon1, lat2, lon2) {
-    const R = 6371;
-    const dLat = (lat2 - lat1) * Math.PI / 180;
-    const dLon = (lon2 - lon1) * Math.PI / 180;
-    const a =
-      Math.sin(dLat / 2) ** 2 +
-      Math.cos(lat1 * Math.PI / 180) *
-      Math.cos(lat2 * Math.PI / 180) *
-      Math.sin(dLon / 2) ** 2;
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c;
-  }
-
-  async function send() {
-    try {
-      if (!closestNumber) {
-        alert("Не удалось определить ваше местоположение.");
-        return;
+      function shoot() {
+        confetti({
+          ...defaults,
+          particleCount: 40,
+          origin: { y: 0.6 }
+        });
       }
 
-      const response = await fetch("/send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          number: closestNumber,
-          message: "Привет! Это автоматическое сообщение 🌸"
-        }),
-      });
-
-      const text = await response.text();
-      console.log("✅ Ответ от сервера:", text);
-      launchConfetti();
-    } catch (error) {
-      console.error("❌ Ошибка при отправке:", error);
-    }
-  }
-
-  function launchConfetti() {
-    const defaults = {
-      spread: 360,
-      ticks: 100,
-      gravity: 0.6,
-      decay: 0.94,
-      startVelocity: 25,
-      shapes: ['circle'],
-      scalar: 1.2,
-      colors: ['#E12D5E', '#69BFED', '#E5F132', '#DE8D14', '#A842AB'],
-    };
-
-    function shoot() {
-      confetti({
-        ...defaults,
-        particleCount: 40,
-        origin: { y: 0.6 }
-      });
+      shoot();
+      setTimeout(shoot, 200);
+      setTimeout(shoot, 400);
     }
 
-    shoot();
-    setTimeout(shoot, 200);
-    setTimeout(shoot, 400);
-  }
-</script>
+    function startTimer(durationInSeconds) {
+      clearInterval(countdownInterval);
+      let remaining = durationInSeconds;
+      updateTimerDisplay(remaining);
+
+      countdownInterval = setInterval(() => {
+        remaining--;
+        if (remaining <= 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("timer").textContent = " ";
+        } else {
+          updateTimerDisplay(remaining);
+        }
+      }, 1000);
+    }
+
+    function updateTimerDisplay(seconds) {
+      const minutes = Math.floor(seconds / 60);
+      const secs = seconds % 60;
+      const formatted = `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      document.getElementById("timer").textContent = `⏳ Осталось времени: ${formatted}`;
+    }
+  </script>
 </body>
 </html>
